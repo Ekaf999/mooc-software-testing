@@ -20,4 +20,16 @@ public class InvoiceFilter {
         return filtered;
 
     }
+
+
+    public static void main(String[] args) {
+        System.out.println("Starting to create connection");
+        InvoiceDao idao = new InvoiceDao();
+        Invoice inv1 = new Invoice("Mazsola", 99);
+        Invoice inv2 = new Invoice("Manocska", 100);
+        idao.save(inv1);
+        idao.save(inv2);
+        List<Invoice> result = new InvoiceFilter().filter();
+        System.out.println(result);
+    }
 }

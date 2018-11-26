@@ -10,11 +10,15 @@ public class InvoiceDao {
 
     public void InvoiceDao() {
         try {
-            if(c!=null) return;
+            if(c!=null) {System.out.println("Connection is not null"); return;}
 
-            c = DriverManager.getConnection("jdbc:hsqldb:file:mymemdb.db", "SA", "");
+            //c = DriverManager.getConnection("jdbc:hsqldb:file:mymemdb.db", "SA", "");
+            System.out.println("Establisshing connection...");
+            c = DriverManager.getConnection("jdbc:hsqldb:file:/media/aniko/MyPassport/EDU/AutomatedTesting-Delft/db.mwb", "SA", "");
             c.prepareStatement("create table invoice (name varchar(100), value double)").execute();
+            System.out.println("mySQL table is successfully created.");
         } catch (SQLException e) {
+            System.out.println("Creation of mySQL table failed.");
             throw new RuntimeException(e);
         }
     }
