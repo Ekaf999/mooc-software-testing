@@ -24,6 +24,10 @@ class TwoNumbersSum {
             }
             result.add(i, total);
         }
+        //correction of bug: the last complemet (carry) scall be added if its nonzero
+        if (complement > 0) {
+            result.add(result.size(), complement);
+        }
 
         Collections.reverse(result);
         return result;
