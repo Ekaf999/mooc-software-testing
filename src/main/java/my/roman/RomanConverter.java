@@ -1,3 +1,5 @@
+package my.roman;
+
 import java.util.Hashtable;
 
 public class RomanConverter {
@@ -34,7 +36,7 @@ public class RomanConverter {
         }
         return result;
     }
-
+/*
     public static void main(String[] args) {
         RomanConverter rc = new RomanConverter();
         String[] cases = {"I", "V", "X", "C", "D", "M", "MDCCCXLVI", "MDCCLXXVI", "MCMLIV", "MMXIV", "MMXVIII", "XXIX", "IIXX", "XIIX",
@@ -43,5 +45,6 @@ public class RomanConverter {
             System.out.println(roman + " \t" + rc.roman2arabic(roman));
         }
     }
+*/
 }
 
